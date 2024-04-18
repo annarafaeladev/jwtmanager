@@ -1,0 +1,22 @@
+logging:
+  level:
+    '[org.springframework]': INFO
+    '[org.springframework.orm.jpa.support]': DEBUG}
+    '[spring.jpa]': DEBUG
+
+spring:
+  application:
+    name: "jwtmanager"
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+
+jwt:
+  key: ${JWT_KEY}
+  access-token-expiration: 3600000
+  refresh-token-expiration: 86400000
